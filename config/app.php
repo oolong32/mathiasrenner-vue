@@ -18,8 +18,10 @@
  */
 
 return [
-    'modules' => [
-        'my-module' => \modules\Module::class,
-    ],
-    //'bootstrap' => ['my-module'],
+'modules' => [
+        'mathias-module' => [
+            'class' => \modules\mathiasmodule\MathiasModule::class,
+        ],
+  ],
+  'bootstrap' => ['mathias-module'],
 ];
