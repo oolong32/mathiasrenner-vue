@@ -1,0 +1,15 @@
+enableVersioning: true
+handle: archive
+name: archive
+previewTargets:
+  -
+    label: 'Primäre eintrag Seite'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  48c3aa5b-eec3-4454-a328-a3e1a4f647c2:
+    enabledByDefault: true
+    hasUrls: true
+    template: archive
+    uriFormat: archive
+type: single

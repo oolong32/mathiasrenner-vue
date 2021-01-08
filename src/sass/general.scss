@@ -1,0 +1,114 @@
+:root {
+  font-family: 'helvetica neue', helvetica, arial, sans-serif;
+  font-size: 100%;
+  font-weight:normal;
+  color: #000;
+}
+
+*, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 1.5;
+  // smooth sailing to top of page
+  scroll-behavior: smooth;
+}
+
+body { padding: 6rem 1rem 3rem; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  padding-top: 1rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  a:hover { text-decoration: underline; }
+}
+
+body#portfolio main p { text-align: center;}
+
+article.project {
+  // display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 5rem;
+  align-items: flex-start;
+  h2.project-title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  img.project-image { 
+    margin: 0 auto 1rem 0; // oben links angeschlagen
+    max-width: 100%;
+    height: auto;
+    // prevent theft
+    user-select: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+  }
+  img.project-image + img.project-image { 
+    margin-bottom: 0;
+  }
+  // img.project-image.single { max-width: 60%; }
+}
+
+footer {
+  padding: 0 0 2rem;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: black;
+    // text-transform: none;
+  }
+}
+
+@media (min-width: 600px) {
+  body { padding-top: 8rem; }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 2rem 0;
+  }
+
+  article.project {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 10rem;
+    h2.project-title {
+      width: 100%;
+      margin-top: 2rem;
+      order: 3; // unten
+    }
+    img.project-image.single {
+      max-width: 47%; // noch etwas mehr?
+      margin: 0 auto;
+    }
+    img.project-image.single.single-high {
+      max-width: 30%; // alternatives Bildformat
+    }
+    img.project-image.double { 
+      max-width: 30%;
+      order: 1; // links
+      margin: 0 1rem auto auto;
+    }
+    img.double + img.double {
+      order: 2; // rechts
+      margin: 0 auto auto 0;
+    }
+  }
+}

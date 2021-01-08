@@ -1,0 +1,7 @@
+handle: home
+hasTitleField: false
+name: Home
+section: bce5974d-8954-41f8-b59b-205ef241305b
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleLabel: 'Mathias renner'

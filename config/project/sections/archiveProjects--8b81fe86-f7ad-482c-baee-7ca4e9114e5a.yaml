@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: archiveProjects
+name: 'Archive Projects'
+propagationMethod: all
+siteSettings:
+  48c3aa5b-eec3-4454-a328-a3e1a4f647c2:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: '1'
+  uid: 81e2e04f-2a49-4b20-86ee-459b7cfef917
+type: structure

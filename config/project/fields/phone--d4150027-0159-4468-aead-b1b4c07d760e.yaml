@@ -1,0 +1,16 @@
+contentColumnType: text
+fieldGroup: 623e8f21-c10a-45f4-a9bc-6329faaa52bd
+handle: phone
+instructions: ''
+name: Telefon-Nummer
+searchable: false
+settings:
+  charLimit: ''
+  code: ''
+  columnType: text
+  initialRows: '4'
+  multiline: ''
+  placeholder: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

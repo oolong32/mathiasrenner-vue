@@ -1,0 +1,21 @@
+fieldLayouts:
+  994314ce-1e73-4e7d-99cc-3165b6d64f1f:
+    tabs:
+      -
+        fields:
+          21293d2c-4fb2-495e-aa59-0fa17b99be9b:
+            required: false
+            sortOrder: 3
+          3dc7f4b8-8afa-486d-a5ff-363b1b8816ed:
+            required: false
+            sortOrder: 1
+          d4150027-0159-4468-aead-b1b4c07d760e:
+            required: false
+            sortOrder: 2
+          d6b4bc2e-e70a-4df1-aab3-764a176f112d:
+            required: false
+            sortOrder: 4
+        name: 'Allgemeine Infos'
+        sortOrder: 1
+handle: infos
+name: 'Allgemeine Infos'

@@ -1,0 +1,25 @@
+contentColumnType: string
+fieldGroup: 11fcf648-c46a-4cb9-bf9c-de04e8ce644a
+handle: portfolio
+instructions: 'PDF Upload'
+name: 'Portfolio Upload'
+searchable: true
+settings:
+  allowedKinds:
+    - pdf
+  defaultUploadLocationSource: 'volume:50706d0d-adfc-4561-99a1-bad68c596824'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  restrictFiles: '1'
+  selectionLabel: 'Add Portfolio'
+  singleUploadLocationSource: 'volume:50706d0d-adfc-4561-99a1-bad68c596824'
+  singleUploadLocationSubpath: portfolio
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: '1'
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

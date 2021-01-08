@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="shortcut icon" href="/assets/_pic/favicon.png">
+  <title>{{ currentSite.name }}</title>
+  <meta name="description" content="{{ infos.SEO_snippet }}">
+</head>
+<body id="work">
+
+
+  <header>
+    <h1><a href="/" style="text-decoration: none; color: black;">{{ currentSite.name }}</a>
+    {% if infos.claim|length %}
+    <br><span id="claim">{{ infos.claim }}</span>
+    {% endif %}</h1>
+    <p><a href="tel:{{ infos.phone|replace({' ': ''}) }}">{{ infos.phone }}</a></p>
+    <p><a href="mailto:{{ infos.mail }}">contact</a></p>
+  </header>
+ 
+  <main>
+    {% set projects = craft.entries().section('workProjects').all() %}
+    {% if projects|length %}
+      {% for project in projects %}
+        <article class="project">
+          <h2 class="project-title">{{ project.title }}</h2>
+          {% if project.images|length > 1 %}
+          {% set counter = 0 %}
+            {% for image in project.images %}
+              {% if counter < 2%}
+                <img draggable="false" ondragstart="return false;" class="project-image double" src="{{ image.getUrl() }}" alt="Mathias Renner, {{ project.title }}">
+                {% set counter = counter + 1 %}
+              {% endif %}
+            {% endfor %}
+          {% elseif project.images|length == 1 %}
+          {% set image = project.images.one() %}
+          <img draggable="false" ondragstart="return false;" class="project-image single{{ project.singleHigh ? ' single-high' : '' }}" src="{{ image.getUrl() }}" alt="Mathias Renner, {{ project.title }}">
+          {%   else %}
+            <p>There seem to be no images for this project!?</p>
+          {% endif %}
+        </article>
+      {% endfor %}
+    {% endif %}
+  </main>
+
+  <footer>
+    <p><a href="#work">back to top</a></p>
+  </footer>
+
+  <script src="/assets/js/vue/vue.min.js"></script>
+  <script src="/assets/js/vue/vue_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+baseUrl: '@web'
+handle: default
+hasUrls: true
+language: en-US
+name: 'Mathias Renner'
+primary: true
+siteGroup: dbd97a29-b0b8-4f99-b883-5bbceef9034b
+sortOrder: 1

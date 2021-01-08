@@ -1,0 +1,8 @@
+handle: uploads
+hasUrls: true
+name: Uploads
+settings:
+  path: '@webroot/assets/uploads'
+sortOrder: '2'
+type: craft\volumes\Local
+url: /assets/uploads/

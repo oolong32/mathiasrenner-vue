@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: workProjects
+name: 'Work Projects'
+propagationMethod: all
+siteSettings:
+  48c3aa5b-eec3-4454-a328-a3e1a4f647c2:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: '1'
+  uid: 0e1c5aa7-5b88-4d5e-a6b4-497412eae906
+type: structure

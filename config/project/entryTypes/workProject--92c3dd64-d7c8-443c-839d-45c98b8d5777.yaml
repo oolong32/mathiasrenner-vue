@@ -1,0 +1,25 @@
+fieldLayouts:
+  339f82fe-dbe6-4b8c-b515-662856de2934:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 6720cb60-b2a2-4056-aad9-2f33e3e8f6a5
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: b31016bc-7398-4a61-a43f-3689e5dc9803
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Tab 1'
+        sortOrder: 1
+handle: workProject
+hasTitleField: true
+name: 'Work Projekt'
+section: f902edad-95e7-4e49-bd68-8989a0831fb7
+sortOrder: 1
+titleFormat: ''

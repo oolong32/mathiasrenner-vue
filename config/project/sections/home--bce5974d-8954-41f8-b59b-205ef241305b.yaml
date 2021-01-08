@@ -1,0 +1,15 @@
+enableVersioning: true
+handle: home
+name: Home
+previewTargets:
+  -
+    label: 'Primäre eintrag Seite'
+    urlFormat: '{url}'
+propagationMethod: all
+siteSettings:
+  48c3aa5b-eec3-4454-a328-a3e1a4f647c2:
+    enabledByDefault: true
+    hasUrls: true
+    template: index
+    uriFormat: /
+type: single

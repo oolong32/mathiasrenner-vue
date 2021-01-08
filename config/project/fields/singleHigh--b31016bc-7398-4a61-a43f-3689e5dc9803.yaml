@@ -1,0 +1,11 @@
+contentColumnType: boolean
+fieldGroup: 11fcf648-c46a-4cb9-bf9c-de04e8ce644a
+handle: singleHigh
+instructions: 'Hat nur bei Einzelbild einen Effekt. Einzelbild wird auf grösseren Bildschirmen gleich gross angezeigt wie doppelte Hochformate.'
+name: Hochformat
+searchable: false
+settings:
+  default: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

@@ -1,0 +1,25 @@
+fieldLayouts:
+  8c5f50e6-c54e-495f-a4dc-2e21e247403d:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: 6720cb60-b2a2-4056-aad9-2f33e3e8f6a5
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: b31016bc-7398-4a61-a43f-3689e5dc9803
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Tab 1'
+        sortOrder: 1
+handle: archiveProject
+hasTitleField: true
+name: 'Archiv Projekt'
+section: 8b81fe86-f7ad-482c-baee-7ca4e9114e5a
+sortOrder: 1
+titleFormat: ''

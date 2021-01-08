@@ -1,0 +1,14 @@
+enableVersioning: true
+handle: projects
+name: Projekte
+propagationMethod: all
+siteSettings:
+  48c3aa5b-eec3-4454-a328-a3e1a4f647c2:
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: '1'
+  uid: 3e672880-8754-4593-b2a7-35aa673eb366
+type: structure
