@@ -92,3 +92,6 @@ The folder `web` needs a `.htaccess` file, otherwise `/admin` gets 404.
 
 The functions in `modules/edelmannkrellmodule/src/variables/EdelmannKrellModuleVariable.php` return values that are accessible in twig, such as `craft.edelmannKrellModule.projectsListedByType`.
 
+See [craft documentation](https://craftcms.com/docs/3.x/extend/module-guide.html) for infos.
+
+
