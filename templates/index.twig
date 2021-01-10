@@ -10,15 +10,12 @@
 
   <title>{{ siteName }}</title>
 
-  {# module variable test #}
-  {% set exVar = craft.mathiasModule.exampleVariable() %}
-  <!-- {{ exVar}} -->
-
   <meta name="description" content="{{ infos.SEO_snippet }}">
 </head>
-<body id="projects">
-<div id="app">
 
+<body id="projects">
+  <div id="app">
+  
     <header>
       <h1>{{ currentSite.name }}
       {% if infos.claim|length %}
@@ -28,32 +25,11 @@
       <p><a href="mailto:{{ infos.mail }}">contact</a></p>
     </header>
      
-    <main>
-      {% set projects = craft.entries().section('projects').all() %}
-      {% if projects|length %}
-        {% for project in projects %}
-          <article class="project">
-          {#
-            <h2 class="project-title">{{ project.title }}</h2>
-          #}
-            {% if project.images|length > 1 %}
-            {% set counter = 0 %}
-              {% for image in project.images %}
-                {% if counter < 2%}
-                  <img draggable="false" ondragstart="return false;" class="project-image double" src="{{ image.getUrl() }}" alt="Mathias Renner, {{ project.title }}">
-                  {% set counter = counter + 1 %}
-                {% endif %}
-              {% endfor %}
-            {% elseif project.images|length == 1 %}
-            {% set image = project.images.one() %}
-            <img draggable="false" ondragstart="return false;" class="project-image single{{ project.singleHigh ? ' single-high' : '' }}" src="{{ image.getUrl() }}" alt="Mathias Renner, {{ project.title }}">
-            {%   else %}
-              <p>There seem to be no images for this project!?</p>
-            {% endif %}
-          </article>
-        {% endfor %}
-      {% endif %}
-    </main>
+    {# get projects from module #}
+    {% set projects = craft.mathiasModule.json_projects('projects') %}
+
+    {# Vue Component for Main Content  #}
+    <project-list :projects="{{ projects }}"></project-list>
 
     <footer>
       <p><a href="#projects">back to top</a></p>

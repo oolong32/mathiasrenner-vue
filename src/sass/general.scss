@@ -19,6 +19,7 @@
 body { padding: 6rem 1rem 3rem; }
 
 header {
+  z-index: 100; // above vimeo iframes
   position: fixed;
   top: 0;
   left: 0;
@@ -44,12 +45,16 @@ article.project {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   align-items: flex-start;
-  h2.project-title {
+  &.doppelbild {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 1rem;
+  }
+  .vimeo-player {
     width: 100%;
-    text-align: center;
-    margin-bottom: 1rem;
+    iframe { width: 100%; }
   }
   img.project-image { 
     margin: 0 auto 1rem 0; // oben links angeschlagen
@@ -63,7 +68,7 @@ article.project {
   img.project-image + img.project-image { 
     margin-bottom: 0;
   }
-  // img.project-image.single { max-width: 60%; }
+  //video { max-width: 100%; }
 }
 
 footer {
@@ -85,30 +90,32 @@ footer {
     padding: 2rem 2rem 0;
   }
 
+  main.project-list {
+    padding: 3vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5vw 8vw;
+  }
+
   article.project {
     flex-direction: row;
-    flex-wrap: wrap;
-    margin-bottom: 10rem;
-    h2.project-title {
-      width: 100%;
-      margin-top: 2rem;
-      order: 3; // unten
-    }
-    img.project-image.single {
-      max-width: 47%; // noch etwas mehr?
-      margin: 0 auto;
-    }
-    img.project-image.single.single-high {
-      max-width: 30%; // alternatives Bildformat
-    }
-    img.project-image.double { 
-      max-width: 30%;
-      order: 1; // links
-      margin: 0 1rem auto auto;
-    }
-    img.double + img.double {
-      order: 2; // rechts
-      margin: 0 auto auto 0;
+    // flex-wrap: wrap; // wozu?
+    justify-content: flex-start;
+    margin: 0;
+    img.project-image.single,
+    img.project-image.double { margin: 0; }
+  }
+
+  article.project {
+    // Spezialfall: eigentlich wird das als Hintergrundbild eingesetzt,
+    // weil sonst die Höhe nicht stimmt, die eigentlich mit
+    // Doppelbildern übereinstimmen solle.
+    // Aber wenn es das letzte Element
+    &:nth-child(2n+1) { // gerade, sprich, linke Seite
+      &.einzelbild:last-child { // nachher kommt nichts mehr
+        img { display: block !important; }
+        figure { background: none !important; }
+      }
     }
   }
 }

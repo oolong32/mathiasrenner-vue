@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "filemanager-webpack-plugin": "^2.0.5",
-    "vue": "^2.6.0"
+    "vue": "^2.6.0",
+    "vue-vimeo-player": "^0.1.1"
   },
   "devDependencies": {
     "@vue/cli": "^4.5.10",

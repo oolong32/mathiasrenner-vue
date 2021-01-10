@@ -1,31 +1,29 @@
 contentColumnType: string
 fieldGroup: 11fcf648-c46a-4cb9-bf9c-de04e8ce644a
-handle: images
+handle: videos
 instructions: ''
-name: Bilder
+name: Video
 searchable: false
 settings:
   allowSelfRelations: false
   allowUploads: true
-  allowedKinds:
-    - image
+  allowedKinds: null
   defaultUploadLocationSource: 'volume:50706d0d-adfc-4561-99a1-bad68c596824'
-  defaultUploadLocationSubpath: 'bilder/{slug}'
-  limit: '2'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
   localizeRelations: false
   previewMode: full
-  restrictFiles: '1'
-  selectionLabel: 'Bild wählen'
+  restrictFiles: ''
+  selectionLabel: ''
   showSiteMenu: true
   showUnpermittedFiles: false
-  showUnpermittedVolumes: true
+  showUnpermittedVolumes: false
   singleUploadLocationSource: 'volume:50706d0d-adfc-4561-99a1-bad68c596824'
-  singleUploadLocationSubpath: ''
+  singleUploadLocationSubpath: 'videos/{slug}'
   source: null
-  sources:
-    - 'volume:50706d0d-adfc-4561-99a1-bad68c596824'
+  sources: '*'
   targetSiteId: null
-  useSingleFolder: false
+  useSingleFolder: true
   validateRelatedElements: false
   viewMode: list
 translationKeyFormat: null
