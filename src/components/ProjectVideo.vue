@@ -3,8 +3,6 @@
   class="vimeo-player"
   ref="player"
   :video-id="vimeoId"
-  :height="'100%'"
-  :width="'100%'"
   :client-height="'100%'"
   :client-width="'100%'"
   :options="vimeoOptions"
@@ -39,10 +37,8 @@ export default {
         width: "100%",
         height: "100%",
         controls: false,
-        muted: true,
         playsinline: true,
-        autoplay: true,
-        loop: true
+        background: true
       },
     }
   },
