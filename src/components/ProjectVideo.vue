@@ -38,6 +38,7 @@ export default {
         height: "100%",
         controls: false,
         playsinline: true,
+        loop: true,
         background: true
       },
     }
