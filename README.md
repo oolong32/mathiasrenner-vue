@@ -69,7 +69,7 @@ Always **clear the cache** after pulling npm build files (Craft CP, Tools).
 
 #### htaccess
 
-(maybe not relevant, still from older project)
+(seems irrelevant, still from older project)
 
 The folder `web` needs a `.htaccess` file, otherwise `/admin` gets 404.
 
