@@ -1,4 +1,4 @@
-dateModified: 1610286211
+dateModified: 1611773184
 email:
   fromEmail: mathias@mathiasrenner.ch
   fromName: 'Mathias Renner'
@@ -20,7 +20,7 @@ system:
   edition: solo
   live: true
   name: 'Mathias Renner'
-  schemaVersion: 3.5.13
+  schemaVersion: 3.6.1
   timeZone: Europe/Zurich
 users:
   allowPublicRegistration: false
