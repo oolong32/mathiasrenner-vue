@@ -3,39 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="/assets/_pic/favicon.png">
-  <title>{{ currentSite.name }}</title>
-  <meta description="Mathias Renner is a swiss artist specialized in installation art and photgraphy.">
-</head>
 
+  {{ craft.twigpack.includeCssModule("app.css", true) }}
+
+  <title>{{ siteName }}</title>
+
+  <meta name="description" content="{{ infos.SEO_snippet }}">
+</head>
 
 {% set portfolioEntry = craft.entries().section('portfolio').one() %}
 
 
 <body id="{{ portfolioEntry.title|lower }}">
+  <div id="app">
 
-  <header>
-    <h1>{{ currentSite.name }}
-    {% if infos.claim|length %}
-    <br><span id="claim">{{ infos.claim }}</span>
-    {% endif %}</h1>
-    <p><a href="tel:{{ infos.phone|replace({' ': ''}) }}">{{ infos.phone }}</a></p>
-    <p><a href="mailto:{{ infos.mail }}">contact</a></p>
-  </header>
- 
-  <main>
-    {% if portfolioEntry.portfolio|length %}
-      {% set portfolio = entry.portfolio.one() %}
-      {% set size = portfolio.size // 1000000 %}
-      <p>Download: <a href="{{ portfolio.url }}">Portfolio</a> (PDF, {{ size ? size : '< 1' }} MB)</p>
-    {% else %}
-      <p>No downloads at this time.</p>
-    {% endif %}
-  </main>
+    <header>
+      <h1>{{ currentSite.name }}
+      {% if infos.claim|length %}
+      <br><span id="claim">{{ infos.claim }}</span>
+      {% endif %}</h1>
+      <p><a href="tel:{{ infos.phone|replace({' ': ''}) }}">{{ infos.phone }}</a></p>
+      <p><a href="mailto:{{ infos.mail }}">contact</a></p>
+    </header>
+   
+    <main>
+      {% if portfolioEntry.portfolio|length %}
+        {% set portfolio = entry.portfolio.one() %}
+        {% set size = portfolio.size // 1000000 %}
+        <p>Download: <a href="{{ portfolio.url }}">Portfolio</a> (PDF, {{ size ? size : '< 1' }} MB)</p>
+      {% else %}
+        <p>No downloads at this time.</p>
+      {% endif %}
+    </main>
 
-  <footer>
-  </footer>
+    <footer>
+    </footer>
+
+  </div>
+
+  {{ craft.twigpack.includeSafariNomoduleFix() }}
+  {{ craft.twigpack.includeJsModule("app.js", true) }}
+  {{ craft.twigpack.includeJsModule("chunk-vendors.js", true) }}
 
 </body>
 </html>
